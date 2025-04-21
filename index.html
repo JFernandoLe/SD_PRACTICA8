@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preload" href="css/normalize.css" as="style">
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital@0;1&family=PT+Sans:wght@400;700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+    <link rel="preload" href="css/styles.css" as="style">
+    <link href="css/styles.css" rel="stylesheet">
+    <title>Distribucion de Poisson</title>
+     <!-- Vincular el manifiesto -->
+  <link rel="manifest" href="manifest.json" />
+  <meta name="theme-color" content="#2196f3" />
+
+  <!-- Íconos -->
+  <link rel="icon" href="icons/icon-192.png" />
+
+  <!-- Registrar Service Worker -->
+  <script>
+    if ('serviceWorker' in navigator) {
+      navigator.serviceWorker.register('/sw.js')
+        .then(reg => console.log('SW registrado ✅'))
+        .catch(err => console.log('SW falló ⚠️', err));
+    }
+  </script>
+</head>
+
+<body>
+    <header class="contenedor">
+    <section class="hero">
+        <img src="img/dice.jpg">
+        <div class="fondo">
+            <h1>Problema sobre escoliosis</h1>  
+        </div>
+    </section>    
+    
+    </header>
+    
+    <main>
+    <div class="problema">
+        <p>Se sabe que la probabilidad de que un estudiante de una preparatoria local presente escoliosis es (p). De los siguientes (n) estudiantes que se revisen en busqueda de escoliosis, encuentre la probabilidad de que: </p>
+        <div class="datos__problema">
+            <form class="formulario">
+                <fieldset>
+                    <legend>Llene los siguientes datos</legend>
+                    <div class="campo">
+                        <label>Valor de p</label>
+                        <input type="number" placeholder="valor de p" id="p" min="0" step="0.0001">
+                    </div>
+                    <div class="campo">
+                        <label>Valor de n</label>
+                        <input type="number" placeholder="valor de n" id="n" min="0">
+                    </div>
+                </fieldset>
+            </form>
+        </div>
+        <div class="eje1__problema">
+        <p>a) menos de (K) presenten el problema</p>
+        <form class="formulario1">
+            <fieldset>
+                <legend>Llene los siguientes datos</legend>
+                <div class="campo">
+                    <label>Valor de k</label>
+                    <input type="number" placeholder="valor de k" id="k" min="0">
+                </div>
+                
+                <div class="submit">
+                    <input type="submit" class="formulario__submit"  value="Calcular">
+                </div>
+            </fieldset>
+        </form>
+        </div>
+        <div class="eje2__problema">
+            <p>b) k1, k2 o k3 presenten el problema</p>
+            <form class="formulario2">
+                <fieldset>
+                    <legend>Llene los siguientes datos</legend>
+                    <div class="campo">
+                        <label>Valor de k1</label>
+                        <input type="number" placeholder="valor de k1" id="k1" min="0">
+                    </div>
+                    <div class="campo">
+                        <label>Valor de k2</label>
+                        <input type="number" placeholder="valor de k2" id="k2" min="0">
+                    </div>
+                    <div class="campo">
+                        <label>Valor de k3</label>
+                        <input type="number" placeholder="valor de k3" id="k3" min="0">
+                    </div>
+                    <div class="submit">
+                        <input type="submit" class="formulario__submit" value="Calcular">
+                    </div>
+                    
+                </fieldset>
+            </form>
+        </div>
+    </div>
+    <div class="seccion--imagenes"> 
+        <div class="imagen--medico">
+            <img src="img/medico.jpg">
+        </div>   
+        <div class="imagen--estadistica">
+            <img src="img/estadistica.png">
+        </img>
+    </div>
+    </main>
+    <footer>
+
+    </footer>
+    <script src="js/script.js"></script>
+</body>
+</html>

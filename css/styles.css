@@ -1,0 +1,135 @@
+:root{
+    --azulOscuro:#19535F;
+    --azulClaro: #0B7A75;
+    --beige: #D7C9AA;
+    --rojo: #7B2D26;
+    --blanco:#F0F3F5;
+    --fuentePrincipal:"Roboto", sans-serif;
+}
+html{
+    box-sizing: border-box;
+    font-size: 62.5%;
+}
+*,*:before,*:after{
+    box-sizing: inherit;
+}
+
+body{
+    font-size: 2rem;
+    font-family: var(--fuentePrincipal);
+}
+h1{
+    margin: 0 auto;
+    margin-bottom: 0;
+    color:white;
+}
+h2{
+    text-align: center;
+}
+img{
+    width: 100%;
+    height: auto;
+}
+
+.contenedor{
+    display: block;    
+    text-align: center;
+    width: 100%;
+    max-height: 15rem;
+    overflow: hidden;;
+}
+.hero {
+    position: relative;
+}
+.fondo{
+    position: absolute;
+    max-height: 15rem;
+    bottom: 0;
+    left: 0;
+    top: 0;
+    right: 0;
+    background-color: rgba(0,0,0,0.7);
+    padding-top: 0;
+}
+@media (min-width: 768px) {
+    .fondo{
+        padding-top: 3rem;
+    }
+}
+
+.formulario1 fieldset, .formulario fieldset,.formulario2 fieldset{
+    border:none;
+    background-color: var(--blanco);
+}
+.formulario1 fieldset, .formulario fieldset,.formulario2 fieldset{
+    font-size: 1.8rem;
+}
+.campo{
+   margin: 1rem;
+   border: none;
+}
+.campo input[type="number"]{
+    border:none;
+}
+.formulario__submit{
+    background-color: var(--rojo);
+    padding:0.5rem 4rem;
+    font-size: 2rem;
+    border-radius: 0.5rem;
+    text-transform: uppercase;
+    text-decoration: none;
+    font-weight: bold;
+    color: var(--blanco);
+    border: none;
+    width: 90%;
+    text-align: center;
+    transition: font-size .3s ease;
+}
+.formulario__submit:hover{
+    font-size: 2.3rem;
+    cursor: pointer;
+}
+@media (min-width: 768px) {
+    .formulario__submit{
+        width: auto;
+    }
+    
+}
+.seccion--imagenes{
+    margin-top: 2rem;
+    display:flex;
+    flex-direction:column;
+    gap:1rem;
+}
+.imagen--medico, .imagen--estadistica{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto;
+    max-width: 50rem;
+}
+@media (min-width: 768px) {
+    .seccion--imagenes{
+    flex-direction: row;
+    gap:1rem;
+    }
+}
+footer{
+    color:white;
+    padding: 1rem;
+    background-color:black;
+    text-align: center;
+    line-height: 0.3;
+    margin-top: 6rem;
+}
+.resultado{
+    text-align: center;
+    font-family: var(--fuentePrincipal);
+    font-size: 2rem;
+}
+.resultado2{
+    text-align: center;
+    font-family: var(--fuentePrincipal);
+    font-size: 2rem;
+}
